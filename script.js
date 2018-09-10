@@ -7,56 +7,79 @@
 // Prompt the user to guess the integer.
 // Use a while loop to keep asking the user to guess an integer as long as his guess is not equal to the generated integer.
 // Once he guesses it correctly, end the loop.
-// Hint: What's the difference between a do-while loop and a while loop?
+// // Hint: What's the difference between a do-while loop and a while loop?
 
+do {
+    var random = Math.floor((Math.random() * 10) + 1)
+    var answer = parseInt(prompt('Guess the number (1-10)'))
+} while (answer !== random)
 
+// // Exercise 2: Reversing a String
+// // ==============================
+// // Write a function that takes a string as an argument and returns its reverse. For example, reverseString("abc defg")
+// // should return "gfed cba".
 
+// function gostan (string) {
+//     var result = ' '
+//     for (var i = string.length-1; i>=0; i--)
+//         result += string[i];
+//     return result;
+// }
 
-
-
-
-// Exercise 2: Reversing a String
-// ==============================
-// Write a function that takes a string as an argument and returns its reverse. For example, reverseString("abc defg")
-// should return "gfed cba".
-
-
-
-
-
-
-
+// var test = prompt('Enter String')
+// alert(gostan(test))
 
 // Exercise 3
 // ==========
-var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94, 0, -2, 4, 2, 7];
 
 // Write functions that each take an array of numbers, e.g. numArray, and...
-// 1. return an array with the elements in reverse order, e.g. reverseArray([1,2,3]) should return [3,2,1]
 // 2. return an array with each element of the input array multiplied by 2, e.g. double([1,2,3]) should return [2,4,6]
 // 3. return the sum up all the elements of the input array, e.g. sum([1,2,3]) should return 6
 // 4. return an array with only odd numbers from the input array, e.g. onlyOdd([1,2,3,4,5]) should return [1,3,5]
 // 5. (Bonus) return an array where each element in this new array is the sum of the element before it and the element in its current position in the old array, e.g. the first few elements in this new array would be `[3, 12, 11, 7, 8, ...]`
 
+//3.1
+return an array with the elements in reverse order, e.g. reverseArray([1,2,3]) should return [3,2,1]
+
+var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94, 0, -2, 4, 2, 7];
+
+function revArray (parameter) {
+    var newArray = [];
+    for (var i = parameter.length-1; i>=0; i--) {
+        newArray.push(parameter[i]);
+    }
+    return newArray
+}
+
+alert(revArray(numArray))
+
+//3.2
 
 
 
+//3.3
 
 
+
+//3.4
+
+
+
+//3.5
 
 // Exercise 4
 // ==========
 // Examine the phonebook below.
 // Write a function that takes an object, e.g. Phonebook, that uses a loop to return an object with keys and values swapped.
 var Phonebook = {
-    "Aaron":    92133243,
-    "Betty":    91120543,
-    "Cammy":    85535657,
-    "Denise":   64122423,
-    "Emma":     64485690,
-    "Felicia":  83323669,
-    "George":   98119091,
-    "Herman":   63436894,
+    "Aaron": 92133243,
+    "Betty": 91120543,
+    "Cammy": 85535657,
+    "Denise": 64122423,
+    "Emma": 64485690,
+    "Felicia": 83323669,
+    "George": 98119091,
+    "Herman": 63436894,
 };
 
 
@@ -128,12 +151,3 @@ var testArray = ["Alice", "Bobby", "Charles", "Daniel", "Elise", "Farnsworth", "
 // ..*..
 // .*.*.
 // *****
-
-
-
-
-
-
-
-
-
